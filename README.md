@@ -8,31 +8,31 @@ Using smooth-gradient server side
 ---------------------------------
 Install the smooth-gradient module
 
-```
+```bash
 npm install smooth-gradient
 ```
 
 Add it to your source.
 
-```
-var Spectrum = require('smooth-gradient');
+```javascript
+const Spectrum = require('smooth-gradient');
 ```
 
 Usage
 --------------------
 
-A single class is exposed, Spectrum, which takes a list of colors stops and steps.
+A single class is exposed, `Spectrum`, which takes as much color elements as you want as parameters, and the amount of steps to use.
 
 ```javascript
 // Colors can be given as an unlimited number of parameters
-var grad = new Spectrum("FF0000", "00FF00", {r: 0, g:0, b:255}, "#000000");
+const grad = new Spectrum("FF0000", "00FF00", {r: 0, g:0, b:255}, "#000000");
 ```
 
 You can now retreive the color corresponding to your input in the gradiant spectrum.
 Only values between 0 and 100 are effective. Negatives will be considered as 0 and values above 100 as 100.
 
 ```javascript
-var color = grad.getColor(45);
+const color = grad.getColor(45);
 console.log(color); // output => Color { r: 0, g: 128, b: 128 }
 ```
 
