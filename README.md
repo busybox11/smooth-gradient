@@ -2,7 +2,7 @@
 smooth-gradient.js
 ========================
 
-Calculate some gradient and a specific color for a input value
+Calculate a gradient and get one of its colors at a given point, from an array of colors.
 
 Using smooth-gradient server side
 ---------------------------------
@@ -36,4 +36,4 @@ const color = grad.getColor(45);
 console.log(color); // output => Color { r: 0, g: 128, b: 128 }
 ```
 
-This package is perfect for color gradient progress bar for example.
+This package could be a great fit for gradients in progress bars, for example.
